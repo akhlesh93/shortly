@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="script.js" defer></script>
+    <title>Shortly | Tailwind CSS Website</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="relative container">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-20">
+                    <!-- Logo -->
+                    <img src="images/logo.svg" alt="">
+                    <!-- Navigation -->
+                    <ul class="flex space-x-8 font-bold md:hidden">
+                        <li><a href="#" class="menu-link">Features</a></li>
+                        <li><a href="#" class="menu-link">Pricing</a></li>
+                        <li><a href="#" class="menu-link">Resources</a></li>
+                    </ul>
+                </div>
+                <!-- Login/Signup -->
+                <div class="flex items-center space-x-6 font-bold md:hidden">
+                    <a href="#" class="menu-link"> Login </a>
+                    <a href="#" class="btn"> Signup </a>
+                </div>
+                <!-- Mobile trigger -->
+                <div id="mobile-trigger" class="group flex-col w-8 h-6 space-y-1 cursor-pointer hidden md:flex">
+                    <div class="menu-icon top"></div>
+                    <div class="menu-icon middle"></div>
+                    <div class="menu-icon bottom"></div>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="mobile-menu absolute left-4 right-4 top-full bg-darkViolet p-6 rounded-lg hidden">
+                <ul class="flex flex-col items-center space-y-6 font-bold">
+                    <li><a href="#" class="menu-link">Features</a></li>
+                    <li><a href="#" class="menu-link">Pricing</a></li>
+                    <li><a href="#" class="menu-link">Resources</a></li>
+                    <div class="w-full border-b border-gray-400"></div>
+                    <li><a href="#" class="menu-link">Login</a></li>
+                    <li class="w-full text-center"><a href="#" class="block btn menu-link">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section id="hero" class="pb-10">
+        <div class="container">
+            <div class="flex md:flex-col-reverse items-center justify-between space-x-8 md:space-x-0">
+                <div class="max-w-lg md:text-center space-y-8 py-32 md:py-16">
+                    <h1 class="text-6xl md:text-4xl sm:text-3xl font-bold">
+                        More than just shorter links
+                    </h1>
+                    <p class="text-2xl md:text-xl text-gray-400">
+                        Build your brand's recognition and get detailed insights on how your
+                        links are performing.
+                    </p>
+                    <a href="#" class="btn py-5 px-10 text-2xl md:text-xl font-bold">Get Started</a>
+                </div>
+                <div class="md:py-8">
+                    <img src="images/illustration-working.svg" alt="" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shorten section -->
+    <section id="shorten" class="bg-gray-100">
+        <div class="container">
+            <div class="max-w-4xl mx-auto space-y-6">
+                <form
+                    class="flex sm:flex-col p-10 sm:p-6 -mt-20 space-x-2 sm:space-x-0 sm:space-y-4 bg-darkViolet rounded-lg">
+                    <input type="url" name="url" id="url"
+                        class="w-full p-3 border-2 rounded-lg placeholder-yellow-500 outline-none"
+                        placeholder="Shorten a link here">
+                    <button type="submit" class="btn w-64 sm:w-full rounded-lg">Shorten Url</button>
+                </form>
+                <div class="shorted-items space-y-4">
+                    <div class="item">
+                        <div class="item-url">https://frontendmentor.io</div>
+                        <div class="shorted-url">
+                            <span>https://rel.ink/k4IKyk</span>
+                            <a href="#" class="btn">Copy</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-url">https://twitter.com/frontendmentor</div>
+                        <div class="shorted-url">
+                            <span>https://rel.ink/gxOXp9</span>
+                            <a href="#" class="btn">Copy</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-url">https://linkedin.com/frontend-mentor</div>
+                        <div class="shorted-url">
+                            <span>https://rel.ink/gob3X9</span>
+                            <a href="#" class="btn">Copy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced statistics section -->
+    <section id="stats" class="bg-gray-100 py-24">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-6">Advanced Statistics</h2>
+                <p class="max-w-md mx-auto text-gray-400">Track how your links are performing across the web with our
+                    advanced statistics dashboard.</p>
+            </div>
+            <div class="stats-tiles relative flex items-start sm:flex-wrap mt-24">
+                <div class="tile">
+                    <div class="img-wrapper">
+                        <img src="images/icon-brand-recognition.svg" alt="">
+                    </div>
+                    <h5>Brand Recognition</h5>
+                    <p>
+                        Boost your brand recognition with each click. Generic links don't mean a thing. Branded links
+                        help instil confidence in your content.
+                    </p>
+                </div>
+                <div class="tile mt-8">
+                    <div class="img-wrapper">
+                        <img src="images/icon-detailed-records.svg" alt="">
+                    </div>
+                    <h5>Detailed Records</h5>
+                    <p>
+                        Gain insights into who is clicking your links. Knowing when and where people engage with your
+                        content helps inform better decisions.
+                    </p>
+                </div>
+                <div class="tile mt-16">
+                    <div class="img-wrapper">
+                        <img src="images/icon-fully-customizable.svg" alt="">
+                    </div>
+                    <h5>Fully Customizable</h5>
+                    <p>
+                        Improve brand awareness and content discoverability through customizable links, supercharging
+                        audience engagement.
+                    </p>
+                </div>
+                <div class="absolute right-0 top-1/2 h-3 bg-cyan w-full sm:hidden"></div>
+                <div class="absolute top-0 left-1/2 -ml-1.5 w-3 bg-cyan h-full hidden sm:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA section -->
+    <section id="cta" class="py-24 bg-darkViolet">
+        <div class="container">
+            <div class="space-y-6 text-center">
+                <h5 class="max-w-xl mx-auto text-4xl font-bold text-white">Boost your links today</h5>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 sm:py-12 bg-veryDarkViolet">
+        <div class="container">
+            <div class="flex justify-between sm:flex-col sm:space-y-10 sm:items-center">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="" class="invert">
+                </div>
+                <div
+                    class="footer-menu flex sm:flex-col space-x-20 sm:space-x-0 sm:space-y-10 md:space-x-10 sm:items-center sm:text-center">
+                    <div class="menu-1">
+                        <h5>Features</h5>
+                        <ul>
+                            <li><a href="#">Link Shortening</a></li>
+                            <li><a href="#">Branded Links</a></li>
+                            <li><a href="#">Analytics</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-2">
+                        <h5>Resources</h5>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-3">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social flex items-start space-x-6">
+                    <a href="#">
+                        <img src="images/icon-facebook.svg" alt="" class="ficon">
+                    </a>
+                    <a href="#">
+                        <img src="images/icon-twitter.svg" alt="" class="ficon">
+                    </a>
+                    <a href="#">
+                        <img src="images/icon-pinterest.svg" alt="" class="ficon">
+                    </a>
+                    <a href="#">
+                        <img src="images/icon-instagram.svg" alt="" class="ficon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+/********************
+* Button
+********************/
+
+.btn {
+	@apply inline-block bg-cyan text-white text-center rounded-full hover:opacity-70 px-8 py-3 duration-300;
+}
+
+@tailwind utilities;
+
+/********************
+* container
+********************/
+
+.container {
+	@apply mx-auto p-6;
+}
+@media (min-width: 1536px) {
+	.container {
+		max-width: 1535px;
+	}
+}
+@media (max-width: 1535px) {
+	.container {
+		max-width: 1280px;
+	}
+}
+@media (max-width: 1279px) {
+	.container {
+		max-width: 1024px;
+	}
+}
+@media (max-width: 1023px) {
+	.container {
+		max-width: 768px;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: 640px;
+	}
+}
+@media (max-width: 639px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+/********************
+* Header menu link
+********************/
+
+a.menu-link {
+	@apply text-grayishViolet hover:text-veryDarkViolet duration-300;
+}
+
+.mobile-menu a.menu-link {
+	@apply text-white;
+}
+
+/************************
+* Mobile menu & trigger
+************************/
+
+.menu-icon {
+	@apply pointer-events-none w-full border-b-4 border-grayishViolet group-hover:border-veryDarkViolet duration-300;
+}
+
+.open .menu-icon.top {
+	@apply rotate-45 translate-y-3;
+}
+
+.open .menu-icon.middle {
+	@apply opacity-0;
+}
+
+.open .menu-icon.bottom {
+	@apply -rotate-45 -translate-y-1;
+}
+
+.mobile-open .mobile-menu {
+	@apply block;
+}
+
+/************************
+* Shorten items
+************************/
+
+.shorted-items .item {
+	@apply flex sm:flex-col items-center justify-between bg-white rounded-lg p-4 sm:space-y-4;
+}
+
+.shorted-items .item .item-url {
+	@apply font-bold text-veryDarkViolet sm:text-center break-all;
+}
+
+.shorted-items .item .shorted-url {
+	@apply space-x-4 sm:space-x-0 sm:space-y-4 sm:flex sm:flex-col sm:justify-center;
+}
+
+.shorted-items .item .shorted-url > span {
+	@apply font-bold text-cyan;
+}
+
+.shorted-items .item .btn {
+	@apply rounded-xl p-2 px-8;
+}
+
+/***************************
+* Advanced Statistics tiles
+***************************/
+
+.stats-tiles .tile {
+	@apply relative z-10 bg-white p-6 rounded-lg space-y-6 w-1/3 sm:w-full sm:text-center;
+}
+
+.stats-tiles .tile:not(:first-child) {
+	@apply ml-8;
+}
+
+.stats-tiles .tile .img-wrapper {
+	@apply absolute -top-10 left-6 flex items-center justify-center bg-veryDarkViolet p-4 rounded-full w-20 h-20 sm:left-1/2 sm:-ml-10;
+}
+
+.stats-tiles .tile h5 {
+	@apply font-bold text-xl capitalize pt-6;
+}
+
+.stats-tiles .tile p {
+	@apply text-gray-400;
+}
+
+@media (max-width: 767px) {
+	.stats-tiles .tile:not(:first-child) {
+		@apply ml-0 mt-24;
+	}
+}
+
+/***************************
+* CTA section
+***************************/
+
+#cta {
+	background-image: url(../images/bg-boost-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/***************************
+* Footer menu
+***************************/
+
+.footer-menu h5 {
+	@apply text-white font-bold mb-5;
+}
+
+.footer-menu ul {
+	@apply space-y-4;
+}
+
+.footer-menu ul li a {
+	@apply text-gray-400 hover:text-cyan;
+}
+
+.footer-social a:hover {
+	@apply opacity-50;
+}
